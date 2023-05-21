@@ -1,5 +1,5 @@
 
-public class Persona {
+public class Persona extends Thread{
     public String nombre;
     public int tiempoDescanso;
     public boolean descansado;
