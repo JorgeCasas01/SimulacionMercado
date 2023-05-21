@@ -1,5 +1,5 @@
 public class Productor extends Persona{
-  int tiempoProduccion;
+    int tiempoProduccion;
   
   public Productor(String parNombre, int parTiempoDesc, int parTiempoProduccion) {
     super(parNombre, parTiempoDesc);
@@ -19,16 +19,5 @@ public class Productor extends Persona{
       //ToDo
     }
   }
-  
-  public void run(){
-    while(!this.getEstaDescansando()){
-      this.producir();
-      try {
-        Thread.sleep(5);
-      } catch (InterruptedException ex) {
-        Logger.getLogger(Productor.class.getName()).log(Level.SEVERE, null, ex);
-      }
-    }
-  }
-  
+
 }
