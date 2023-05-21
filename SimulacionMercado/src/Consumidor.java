@@ -1,13 +1,22 @@
 public class Consumidor extends Persona {
-    public int tiempoConsumo;
-
-    //boolean consumiendo donde va a ir el try con el hilo de consumo
-
-    Consumidor(){
-        //this.tiempoConsumo=tiempoConsumo;
+    private int tiempoConsumo;
+  
+  public Consumidor(String parNombre, int parTiempoDesc, int parTiempoConsumo) {
+    super(parNombre, parTiempoDesc);
+    tiempoConsumo = parTiempoConsumo;
+  }
+  
+  public int returnTiempoConsumo(){
+    return tiempoConsumo;
+  }
+  
+  public void setTiempoConsumo(int parTiempoConsumo){
+    tiempoConsumo = parTiempoConsumo;
+  }
+  
+  public void consumir(){
+    if(!this.getEstaDescansando()){
+      //ToDo
     }
-
-    public void Consumir() {
-        
-    }
+  }
 }
